@@ -1,18 +1,18 @@
-var http = require('http');
-// http protokolünü kodlarımızda kullanabilmek için dahil ediyor.
-// require komutu ile içinde belirttiğimiz kütüphaneler nodejs içinde ya da
-// npm ile yüklediğimiz yapılar olmalıdır
+ï»¿var http = require('http');
+// http protokolÃ¼nÃ¼ kodlarÄ±mÄ±zda kullanabilmek iÃ§in dahil ediyor.
+// require komutu ile iÃ§inde belirttiÄŸimiz kÃ¼tÃ¼phaneler nodejs iÃ§inde ya da
+// npm ile yÃ¼klediÄŸimiz yapÄ±lar olmalÄ±dÄ±r
 
-// http ile sunucumuzun kurulumunu yapıyoruz
+// http ile sunucumuzun kurulumunu yapÄ±yoruz
 http.createServer(function (req, res) {
-// kurulum sonucu olarak bu isimsiz fonksiyona 'callback' geri dönüş sağlanır
+// kurulum sonucu olarak bu isimsiz fonksiyona 'callback' geri dÃ¶nÃ¼ÅŸ saÄŸlanÄ±r
   res.writeHead(200, {'Content-Type': 'text/plain'});
-// res -> respond yani sunucunun döneceği cevap olarak kullanılmaktadır.
-// 200 kodu sunucudan 'OK' sonucu yani sonucun hatasız döndüğünü belirtir.
-// sonuç tipinin 'text/plain' düz metin belgesi olduğunu belirtir.
+// res -> respond yani sunucunun dÃ¶neceÄŸi cevap olarak kullanÄ±lmaktadÄ±r.
+// 200 kodu sunucudan 'OK' sonucu yani sonucun hatasÄ±z dÃ¶ndÃ¼ÄŸÃ¼nÃ¼ belirtir.
+// sonuÃ§ tipinin 'text/plain' dÃ¼z metin belgesi olduÄŸunu belirtir.
   res.end('Hello World\n');
-// içerik olarak ekrana helloWorld yazısı yazdırılır
+// iÃ§erik olarak ekrana helloWorld yazÄ±sÄ± yazdÄ±rÄ±lÄ±r
 }).listen(1337, '127.0.0.1');
-// uygulama 1337 portundan localhost || 127.0.0.1 adresi üzerinden yayın yapmaktadır.
+// uygulama 1337 portundan localhost || 127.0.0.1 adresi Ã¼zerinden yayÄ±n yapmaktadÄ±r.
 console.log('Server running at http://127.0.0.1:1337/');
-// sorunsuz çalıştığında nodejs'in loglaması içindir.
+// sorunsuz Ã§alÄ±ÅŸtÄ±ÄŸÄ±nda nodejs'in loglamasÄ± iÃ§indir.
